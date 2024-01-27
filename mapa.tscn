@@ -1,0 +1,305 @@
+[gd_scene load_steps=9 format=3 uid="uid://dq3by0klon2ac"]
+
+[ext_resource type="Texture2D" uid="uid://tr3dvllla1ms" path="res://images/recursos.png" id="1_ry5ce"]
+[ext_resource type="Texture2D" uid="uid://cxfmwyfcfk5h8" path="res://images/player_city.png" id="3_2j6qm"]
+[ext_resource type="PackedScene" uid="uid://dea6syb0ply62" path="res://drag.tscn" id="4_3ko77"]
+[ext_resource type="Texture2D" uid="uid://bgcg7n34g81g5" path="res://images/player_place.png" id="4_r1sss"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wqgn8"]
+texture = ExtResource("1_ry5ce")
+texture_region_size = Vector2i(300, 346)
+2:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+1:0/0 = 0
+0:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_1s7gx"]
+resource_local_to_scene = true
+tile_shape = 3
+tile_size = Vector2i(300, 346)
+sources/2 = SubResource("TileSetAtlasSource_wqgn8")
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_ejpdh"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3vwyd"]
+size = Vector2(112, 21.5)
+
+[node name="Init" type="Node2D"]
+
+[node name="Mapa" type="TileMap" parent="."]
+position = Vector2(0, -100)
+scale = Vector2(0.65, 0.65)
+tile_set = SubResource("TileSet_1s7gx")
+format = 2
+layer_0/tile_data = PackedInt32Array(131079, 131074, 0, 196615, 131074, 0, 65542, 131074, 0, 5, 131074, 0, 6, 131074, 0, 4, 131074, 0, 65539, 131074, 1, 65540, 2, 0, 65541, 65538, 1, 196613, 65538, 1, 196611, 65538, 1, 262147, 65538, 1, 131075, 65538, 0, 196610, 65538, 0, 327684, 65538, 0, 262149, 65538, 0, 327685, 2, 0, 262150, 2, 0, 131077, 2, 0, 327683, 2, 1, 131078, 2, 1, 131076, 2, 1, 262148, 131074, 1, 196614, 131074, 1, 196612, 131074, 0, 3, 131074, 0, 65538, 131074, 0, 131074, 131074, 0, 196609, 131074, 0, 262146, 131074, 0, 327682, 131074, 0, 393219, 131074, 0, 393220, 131074, 0, 393221, 131074, 0, 393222, 131074, 0, 327686, 131074, 0, 262151, 131074, 0, 65537, 131074, 0, 2, 131074, 0, 327681, 131074, 0, 393218, 131074, 0, 327687, 131074, 0, 393223, 131074, 0, 65543, 131074, 0, 7, 131074, 0, 1, 65538, 1, 65536, 65538, 1, 131073, 131074, 0, 196608, 131074, 0, 262145, 131074, 0, 327680, 65538, 1, 393217, 65538, 1, 8, 65538, 1, 65544, 65538, 1, 131080, 131074, 0, 196616, 131074, 0, 262152, 131074, 0, 327688, 65538, 1, 393224, 65538, 1, 9, 2, 0, 65545, 65538, 0, 131081, 2, 0, 196617, 131074, 1, 262153, 2, 0, 327689, 65538, 0, 393225, 2, 0, 0, 2, 0, 131071, 65538, 0, 131072, 2, 0, 262143, 131074, 1, 262144, 2, 0, 393215, 65538, 0, 393216, 2, 0)
+
+[node name="Caminos" type="StaticBody2D" parent="."]
+rotation = 1.5708
+physics_material_override = SubResource("PhysicsMaterial_ejpdh")
+
+[node name="1" type="CollisionShape2D" parent="Caminos"]
+position = Vector2(181.5, -682.5)
+shape = SubResource("RectangleShape2D_3vwyd")
+
+[node name="2" type="CollisionShape2D" parent="Caminos"]
+position = Vector2(181.5, -877.5)
+shape = SubResource("RectangleShape2D_3vwyd")
+
+[node name="3" type="CollisionShape2D" parent="Caminos"]
+position = Vector2(181.5, -1072.5)
+shape = SubResource("RectangleShape2D_3vwyd")
+
+[node name="4" type="CollisionShape2D" parent="Caminos"]
+position = Vector2(181.5, -1267.5)
+shape = SubResource("RectangleShape2D_3vwyd")
+
+[node name="5" type="CollisionShape2D" parent="Caminos"]
+position = Vector2(350, -585)
+shape = SubResource("RectangleShape2D_3vwyd")
+
+[node name="6" type="CollisionShape2D" parent="Caminos"]
+position = Vector2(350, -780)
+shape = SubResource("RectangleShape2D_3vwyd")
+
+[node name="7" type="CollisionShape2D" parent="Caminos"]
+position = Vector2(350, -975)
+shape = SubResource("RectangleShape2D_3vwyd")
+
+[node name="8" type="CollisionShape2D" parent="Caminos"]
+position = Vector2(350, -1170)
+shape = SubResource("RectangleShape2D_3vwyd")
+
+[node name="9" type="CollisionShape2D" parent="Caminos"]
+position = Vector2(350, -1365)
+shape = SubResource("RectangleShape2D_3vwyd")
+
+[node name="10" type="CollisionShape2D" parent="Caminos"]
+position = Vector2(518.5, -487.5)
+shape = SubResource("RectangleShape2D_3vwyd")
+
+[node name="11" type="CollisionShape2D" parent="Caminos"]
+position = Vector2(518.5, -682.5)
+shape = SubResource("RectangleShape2D_3vwyd")
+
+[node name="12" type="CollisionShape2D" parent="Caminos"]
+position = Vector2(518.5, -877.5)
+shape = SubResource("RectangleShape2D_3vwyd")
+
+[node name="13" type="CollisionShape2D" parent="Caminos"]
+position = Vector2(518.5, -1072.5)
+shape = SubResource("RectangleShape2D_3vwyd")
+
+[node name="14" type="CollisionShape2D" parent="Caminos"]
+position = Vector2(518.5, -1267.5)
+shape = SubResource("RectangleShape2D_3vwyd")
+
+[node name="15" type="CollisionShape2D" parent="Caminos"]
+position = Vector2(518.5, -1462.5)
+shape = SubResource("RectangleShape2D_3vwyd")
+
+[node name="16" type="CollisionShape2D" parent="Caminos"]
+position = Vector2(687, -585)
+shape = SubResource("RectangleShape2D_3vwyd")
+
+[node name="17" type="CollisionShape2D" parent="Caminos"]
+position = Vector2(687, -780)
+shape = SubResource("RectangleShape2D_3vwyd")
+
+[node name="18" type="CollisionShape2D" parent="Caminos"]
+position = Vector2(687, -975)
+shape = SubResource("RectangleShape2D_3vwyd")
+
+[node name="19" type="CollisionShape2D" parent="Caminos"]
+position = Vector2(687, -1170)
+shape = SubResource("RectangleShape2D_3vwyd")
+
+[node name="20" type="CollisionShape2D" parent="Caminos"]
+position = Vector2(687, -1365)
+shape = SubResource("RectangleShape2D_3vwyd")
+
+[node name="21" type="CollisionShape2D" parent="Caminos"]
+position = Vector2(855.5, -682.5)
+shape = SubResource("RectangleShape2D_3vwyd")
+
+[node name="22" type="CollisionShape2D" parent="Caminos"]
+position = Vector2(855.5, -877.5)
+shape = SubResource("RectangleShape2D_3vwyd")
+
+[node name="23" type="CollisionShape2D" parent="Caminos"]
+position = Vector2(855.5, -1072.5)
+shape = SubResource("RectangleShape2D_3vwyd")
+
+[node name="24" type="CollisionShape2D" parent="Caminos"]
+position = Vector2(855.5, -1267.5)
+shape = SubResource("RectangleShape2D_3vwyd")
+
+[node name="25" type="CollisionShape2D" parent="Caminos"]
+position = Vector2(96.9999, -731)
+rotation = 1.0472
+shape = SubResource("RectangleShape2D_3vwyd")
+
+[node name="26" type="CollisionShape2D" parent="Caminos"]
+position = Vector2(97, -926)
+rotation = 1.0472
+shape = SubResource("RectangleShape2D_3vwyd")
+
+[node name="27" type="CollisionShape2D" parent="Caminos"]
+position = Vector2(97, -1121)
+rotation = 1.0472
+shape = SubResource("RectangleShape2D_3vwyd")
+
+[node name="28" type="CollisionShape2D" parent="Caminos"]
+position = Vector2(265.5, -633.5)
+rotation = 1.0472
+shape = SubResource("RectangleShape2D_3vwyd")
+
+[node name="29" type="CollisionShape2D" parent="Caminos"]
+position = Vector2(265.5, -828.5)
+rotation = 1.0472
+shape = SubResource("RectangleShape2D_3vwyd")
+
+[node name="30" type="CollisionShape2D" parent="Caminos"]
+position = Vector2(265.5, -1023.5)
+rotation = 1.0472
+shape = SubResource("RectangleShape2D_3vwyd")
+
+[node name="31" type="CollisionShape2D" parent="Caminos"]
+position = Vector2(265.5, -1218.5)
+rotation = 1.0472
+shape = SubResource("RectangleShape2D_3vwyd")
+
+[node name="Ciudades" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="city" parent="Ciudades" instance=ExtResource("4_3ko77")]
+layout_mode = 0
+offset_left = 356.0
+offset_top = 341.0
+offset_right = 396.0
+offset_bottom = 381.0
+texture = ExtResource("3_2j6qm")
+
+[node name="place" parent="Ciudades" instance=ExtResource("4_3ko77")]
+layout_mode = 0
+offset_left = 356.0
+offset_top = 400.0
+offset_right = 396.0
+offset_bottom = 440.0
+texture = ExtResource("4_r1sss")
+
+[node name="1" parent="Ciudades" instance=ExtResource("4_3ko77")]
+layout_mode = 0
+offset_left = 664.0
+offset_top = 107.0
+offset_right = 704.0
+offset_bottom = 147.0
+
+[node name="2" parent="Ciudades" instance=ExtResource("4_3ko77")]
+layout_mode = 0
+offset_left = 761.0
+offset_top = 58.0
+offset_right = 801.0
+offset_bottom = 98.0
+
+[node name="3" parent="Ciudades" instance=ExtResource("4_3ko77")]
+layout_mode = 0
+offset_left = 855.0
+offset_top = 110.0
+offset_right = 895.0
+offset_bottom = 150.0
+
+[node name="4" parent="Ciudades" instance=ExtResource("4_3ko77")]
+layout_mode = 0
+offset_left = 950.0
+offset_top = 56.0
+offset_right = 990.0
+offset_bottom = 96.0
+
+[node name="5" parent="Ciudades" instance=ExtResource("4_3ko77")]
+layout_mode = 0
+offset_left = 1053.0
+offset_top = 106.0
+offset_right = 1093.0
+offset_bottom = 146.0
+
+[node name="6" parent="Ciudades" instance=ExtResource("4_3ko77")]
+layout_mode = 0
+offset_left = 1149.0
+offset_top = 54.0
+offset_right = 1189.0
+offset_bottom = 94.0
+
+[node name="7" parent="Ciudades" instance=ExtResource("4_3ko77")]
+layout_mode = 0
+offset_left = 1244.0
+offset_top = 106.0
+offset_right = 1284.0
+offset_bottom = 146.0
+
+[node name="8" parent="Ciudades" instance=ExtResource("4_3ko77")]
+layout_mode = 0
+offset_left = 580.0
+offset_top = 273.0
+offset_right = 620.0
+offset_bottom = 313.0
+
+[node name="9" parent="Ciudades" instance=ExtResource("4_3ko77")]
+layout_mode = 0
+offset_left = 656.0
+offset_top = 213.0
+offset_right = 696.0
+offset_bottom = 253.0
+
+[node name="10" parent="Ciudades" instance=ExtResource("4_3ko77")]
+layout_mode = 0
+offset_left = 762.0
+offset_top = 272.0
+offset_right = 802.0
+offset_bottom = 312.0
+
+[node name="11" parent="Ciudades" instance=ExtResource("4_3ko77")]
+layout_mode = 0
+offset_left = 859.0
+offset_top = 215.0
+offset_right = 899.0
+offset_bottom = 255.0
+
+[node name="12" parent="Ciudades" instance=ExtResource("4_3ko77")]
+layout_mode = 0
+offset_left = 962.0
+offset_top = 278.0
+offset_right = 1002.0
+offset_bottom = 318.0
+
+[node name="13" parent="Ciudades" instance=ExtResource("4_3ko77")]
+layout_mode = 0
+offset_left = 1053.0
+offset_top = 221.0
+offset_right = 1093.0
+offset_bottom = 261.0
+
+[node name="14" parent="Ciudades" instance=ExtResource("4_3ko77")]
+layout_mode = 0
+offset_left = 1156.0
+offset_top = 274.0
+offset_right = 1196.0
+offset_bottom = 314.0
+
+[node name="15" parent="Ciudades" instance=ExtResource("4_3ko77")]
+layout_mode = 0
+offset_left = 1244.0
+offset_top = 223.0
+offset_right = 1284.0
+offset_bottom = 263.0
+
+[node name="16" parent="Ciudades" instance=ExtResource("4_3ko77")]
+layout_mode = 0
+offset_left = 1338.0
+offset_top = 273.0
+offset_right = 1378.0
+offset_bottom = 313.0
