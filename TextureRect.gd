@@ -35,24 +35,32 @@ func _drop_data(at_position, data):
 		if GlobalVar.TURN == GlobalVar.PLAYER_1:
 			GlobalVar.player_city -= 1
 			quantity_type = GlobalVar.player_city
+			GlobalVar.player_city_texture = data
+			GlobalVar.player_city_list.append(name.to_int())
 		elif GlobalVar.TURN == GlobalVar.PLAYER_2:
 			GlobalVar.player2_city -= 1
 			quantity_type = GlobalVar.player2_city
+			GlobalVar.player2_city_texture = data
+			GlobalVar.player2_city_list.append(name.to_int())
 	elif GlobalVar.ACTIVE == GlobalVar.PLACE:
 		node = get_node("/root/Init/Ciudades/place" + turn)
 		if GlobalVar.TURN == GlobalVar.PLAYER_1:
 			GlobalVar.player_place -= 1
 			quantity_type = GlobalVar.player_place
+			GlobalVar.player_place_texture = data
+			GlobalVar.player_place_list.append(name.to_int())
 		elif GlobalVar.TURN == GlobalVar.PLAYER_2:
 			GlobalVar.player2_place -= 1
 			quantity_type = GlobalVar.player2_place
+			GlobalVar.player2_place_texture = data
+			GlobalVar.player2_place_list.append(name.to_int())
 	else:
 		return null
 	if quantity_type <= 0:
 		node.texture =  null
 	texture = data
-	position.x -= 20
-	position.y -= 20
-	var panel = get_child(0)
-	panel.position.x += 20
-	panel.position.y += 20
+	#position.x -= 20
+	#position.y -= 20
+	#var panel = get_child(0)
+	#panel.position.x += 20
+	#panel.position.y += 20

@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://cwyrti7uy6yrs"]
+
+[ext_resource type="Script" path="res://path.gd" id="1_g7blk"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xf4pq"]
+bg_color = Color(0.227451, 0.227451, 0.227451, 0.486275)
+
+[node name="TextureRect" type="TextureRect"]
+offset_right = 30.0
+offset_bottom = 113.0
+expand_mode = 1
+script = ExtResource("1_g7blk")
+
+[node name="Panel" type="Panel" parent="."]
+show_behind_parent = true
+layout_mode = 0
+offset_right = 30.0
+offset_bottom = 113.0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_xf4pq")
