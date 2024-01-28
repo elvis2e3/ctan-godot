@@ -7,16 +7,23 @@ var CITY = "city"
 var PLACE = "place"
 var PATH = "path"
 var ACTIVE
+var TURN = 1
 
+var PLAYER_1 = 1
 var player = "HA"
 var player_city = 2
 var player_place = 2
 var player_path = 2
+var player_city_texture
+var player_place_texture
  
-var pc = "HA"
-var pc_city = 0
-var pc_place = 2
-var pc_path = 2
+var PLAYER_2 = 2
+var player2 = "HA"
+var player2_city = 2
+var player2_place = 2
+var player2_path = 2
+var player2_city_texture
+var player2_place_texture
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
